@@ -28,7 +28,7 @@ func showTransactions(resp http.ResponseWriter, req *http.Request) {
 		Verbose: false,
 	})
 
-	fmt.Println("we have a connection")
+	fmt.Println("Connection to BSCSCAN is created")
 
 	txs, err := client.NormalTxByAddress(ConAddr, &StartBlock, &EndBlock, 1, 100, false)
 
